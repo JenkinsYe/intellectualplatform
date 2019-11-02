@@ -15,4 +15,6 @@ public interface SynthesisDao {
     /** 插入记录 */
     void saveSynthesisDomain(SynthesisDomain domain);
 
+    /** 按名字查找 */
+    List<SynthesisDomain> findByName(String name);
 }

@@ -27,4 +27,8 @@
         ,#{secondaryIndustryGDPIndex}
         ,#{tertiaryIndustryGDPIndex});
     </insert>
+
+    <select id="findByName" resultType="cn.zjcj.intellectualplatform.domain.SynthesisDomain">
+        select * from synthesis where name = #{name} ;
+    </select>
 </mapper>
