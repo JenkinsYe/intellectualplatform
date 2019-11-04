@@ -1,6 +1,7 @@
 package cn.zjcj.intellectualplatform.service;
 
 import cn.zjcj.intellectualplatform.domain.SynthesisDomain;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 

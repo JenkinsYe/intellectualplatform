@@ -3,6 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.zjcj.intellectualplatform.dao.SynthesisDao">
+
     <select id="findAll" resultType="cn.zjcj.intellectualplatform.domain.SynthesisDomain">
         select * from synthesis;
     </select>
@@ -29,6 +30,6 @@
     </insert>
 
     <select id="findByName" resultType="cn.zjcj.intellectualplatform.domain.SynthesisDomain">
-        select * from synthesis where name = #{name} ;
+        select * from synthesis where name="北京市";
     </select>
 </mapper>

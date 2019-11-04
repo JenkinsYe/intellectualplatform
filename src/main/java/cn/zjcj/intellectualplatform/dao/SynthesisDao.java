@@ -1,6 +1,7 @@
 package cn.zjcj.intellectualplatform.dao;
 
 import cn.zjcj.intellectualplatform.domain.SynthesisDomain;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -16,5 +17,5 @@ public interface SynthesisDao {
     void saveSynthesisDomain(SynthesisDomain domain);
 
     /** 按名字查找 */
-    List<SynthesisDomain> findByName(String name);
+    List<SynthesisDomain> findByName(@Param("districtName") String name);
 }
