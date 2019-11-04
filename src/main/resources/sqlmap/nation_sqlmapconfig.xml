@@ -21,5 +21,6 @@
         <mapper resource="cn/zjcj/intellectualplatform/dao/SynthesisMapper.xml"></mapper>
         <mapper resource="cn/zjcj/intellectualplatform/dao/InvestmentMapper.xml"></mapper>
         <mapper resource="cn/zjcj/intellectualplatform/dao/RevenueMapper.xml"></mapper>
+        <mapper resource="cn/zjcj/intellectualplatform/dao/TalentMapper.xml"></mapper>
     </mappers>
 </configuration>

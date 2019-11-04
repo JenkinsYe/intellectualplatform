@@ -3,6 +3,7 @@ package cn.zjcj.intellectualplatform.service;
 import cn.zjcj.intellectualplatform.domain.InvestmentDomain;
 import cn.zjcj.intellectualplatform.domain.RevenueDomain;
 import cn.zjcj.intellectualplatform.domain.SynthesisDomain;
+import cn.zjcj.intellectualplatform.domain.TalentDomain;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -61,4 +62,20 @@ public interface DataService {
      * @return
      */
     List<RevenueDomain> findRevenueByYear(Integer year);
+
+    /**
+     * 人才保障查询
+     * 根据地区名查询
+     * @param name
+     * @return
+     */
+    List<TalentDomain> findTalentByName(String name);
+
+    /**
+     * 人才保障查询
+     * 根据年份查询
+     * @param year
+     * @return
+     */
+    List<TalentDomain> findTalentByYear(Integer year);
 }

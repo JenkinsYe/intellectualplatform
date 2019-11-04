@@ -3,9 +3,11 @@ package cn.zjcj.intellectualplatform.service;
 import cn.zjcj.intellectualplatform.dao.InvestmentDao;
 import cn.zjcj.intellectualplatform.dao.RevenueDao;
 import cn.zjcj.intellectualplatform.dao.SynthesisDao;
+import cn.zjcj.intellectualplatform.dao.TalentDao;
 import cn.zjcj.intellectualplatform.domain.InvestmentDomain;
 import cn.zjcj.intellectualplatform.domain.RevenueDomain;
 import cn.zjcj.intellectualplatform.domain.SynthesisDomain;
+import cn.zjcj.intellectualplatform.domain.TalentDomain;
 import cn.zjcj.intellectualplatform.util.ParamCheckUtils;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -30,6 +32,7 @@ public class DataServiceImpl implements DataService {
     private SynthesisDao synthesisDao;
     private InvestmentDao investmentDao;
     private RevenueDao revenueDao;
+    private TalentDao talentDao;
 
     @PostConstruct
     public void init() {
@@ -43,6 +46,7 @@ public class DataServiceImpl implements DataService {
         synthesisDao = sqlSession.getMapper(SynthesisDao.class);
         investmentDao = sqlSession.getMapper(InvestmentDao.class);
         revenueDao = sqlSession.getMapper(RevenueDao.class);
+        talentDao = sqlSession.getMapper(TalentDao.class);
     }
 
     @Override
@@ -78,6 +82,18 @@ public class DataServiceImpl implements DataService {
     public List<RevenueDomain> findRevenueByYear(Integer year) {
         if (ParamCheckUtils.isValidYear(year))
             return revenueDao.findByYear(year);
+        return null;
+    }
+
+    @Override
+    public List<TalentDomain> findTalentByName(String name) {
+        return talentDao.findByName(name);
+    }
+
+    @Override
+    public List<TalentDomain> findTalentByYear(Integer year) {
+        if (ParamCheckUtils.isValidYear(year))
+            return talentDao.findByYear(year);
         return null;
     }
 }
