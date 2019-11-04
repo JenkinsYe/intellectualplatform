@@ -18,4 +18,7 @@ public interface SynthesisDao {
 
     /** 按名字查找 */
     List<SynthesisDomain> findByName(@Param("districtName") String name);
+
+    /** 按年份查找 */
+    List<SynthesisDomain> findByYear(@Param("year") Integer year);
 }

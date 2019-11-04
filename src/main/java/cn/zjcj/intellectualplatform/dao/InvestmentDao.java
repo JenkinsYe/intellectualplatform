@@ -13,4 +13,7 @@ public interface InvestmentDao {
 
     /** 根据地区查询 */
     List<InvestmentDomain> findByName(@Param("districtName") String name);
+
+    /** 根据年份查询 */
+    List<InvestmentDomain> findByYear(@Param("year") Integer year);
 }

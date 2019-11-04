@@ -6,4 +6,8 @@
     <select id="findByName" resultType="cn.zjcj.intellectualplatform.domain.InvestmentDomain">
         select * from investment where name=#{districtName,jdbcType=VARCHAR} ;
     </select>
+
+    <select id="findByYear" resultType="cn.zjcj.intellectualplatform.domain.InvestmentDomain">
+        select * from investment where year=#{year,jdbcType=INTEGER} ;
+    </select>
 </mapper>

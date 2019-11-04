@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * @author YJJ
  * @Date: Created in 14:50 2019-11-04
@@ -11,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class InvestmentDomain {
+public class InvestmentDomain implements Serializable {
     private Integer id;
     private String name;
     private Integer year;

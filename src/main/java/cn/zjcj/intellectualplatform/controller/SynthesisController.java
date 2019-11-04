@@ -1,7 +1,7 @@
 package cn.zjcj.intellectualplatform.controller;
 
 import cn.zjcj.intellectualplatform.domain.SynthesisDomain;
-import cn.zjcj.intellectualplatform.service.SynthesisDataService;
+import cn.zjcj.intellectualplatform.service.DataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,10 +18,15 @@ import java.util.List;
 public class SynthesisController {
 
     @Autowired
-    private SynthesisDataService synthesisDataService;
+    private DataService dataService;
 
     @GetMapping("/synthesis/findByName")
     public List<SynthesisDomain> findSynthesisByName(@RequestParam("name") String name) {
-        return synthesisDataService.findByName(name);
+        return dataService.findSynthesisByName(name);
+    }
+
+    @GetMapping("/synthesis/findByYear")
+    public List<SynthesisDomain> findSynthesisByYear(@RequestParam("year") Integer year) {
+        return dataService.findSynthesisByYear(year);
     }
 }

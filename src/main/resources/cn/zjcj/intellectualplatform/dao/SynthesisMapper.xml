@@ -30,6 +30,10 @@
     </insert>
 
     <select id="findByName" resultType="cn.zjcj.intellectualplatform.domain.SynthesisDomain">
-        select * from synthesis where name="北京市";
+        select * from synthesis where name = #{districtName,jdbcType=VARCHAR} ;
+    </select>
+
+    <select id="findByYear" resultType="cn.zjcj.intellectualplatform.domain.SynthesisDomain">
+        select * from synthesis where year = #{year,jdbcType=INTEGER} ;
     </select>
 </mapper>
