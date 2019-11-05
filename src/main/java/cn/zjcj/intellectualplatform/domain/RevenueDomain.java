@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
+ * 财政税收实体类
  * @author YJJ
  * @Date: Created in 15:50 2019-11-04
  */

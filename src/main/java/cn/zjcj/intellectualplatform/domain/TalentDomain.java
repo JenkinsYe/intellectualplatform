@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
+ * 人才保障实体类
  * @author YJJ
  * @Date: Created in 20:28 2019-11-04
  */
@@ -44,7 +45,7 @@ public class TalentDomain implements Serializable {
     private Double secondaryVocationalSchoolExpectedGraduate;
     private Double secondaryVocationalSchoolStaff;
     private Double secondaryVocationalSchoolTeacher;
-    private Double noInjuryInsuranceYearEndPopulation;
+    private Double injuryInsuranceYearEndPopulation;
     private Double injuryInsurancePopulation;
     private Double injuryInsuranceFundIncome;
     private Double injuryInsuranceFundExpense;
@@ -83,7 +84,7 @@ public class TalentDomain implements Serializable {
                 ", secondaryVocationalSchoolExpectedGraduate=" + secondaryVocationalSchoolExpectedGraduate +
                 ", secondaryVocationalSchoolStaff=" + secondaryVocationalSchoolStaff +
                 ", secondaryVocationalSchoolTeacher=" + secondaryVocationalSchoolTeacher +
-                ", noInjuryInsuranceYearEndPopulation=" + noInjuryInsuranceYearEndPopulation +
+                ", injuryInsuranceYearEndPopulation=" + injuryInsuranceYearEndPopulation +
                 ", injuryInsurancePopulation=" + injuryInsurancePopulation +
                 ", injuryInsuranceFundIncome=" + injuryInsuranceFundIncome +
                 ", injuryInsuranceFundExpense=" + injuryInsuranceFundExpense +

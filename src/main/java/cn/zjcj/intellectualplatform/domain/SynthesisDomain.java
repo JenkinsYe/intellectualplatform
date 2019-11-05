@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
+ * 综合信息实体类
  * @author YJJ
  * @date 2019-10-30
  */

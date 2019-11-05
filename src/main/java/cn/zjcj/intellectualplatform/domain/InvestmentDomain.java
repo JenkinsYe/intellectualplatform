@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
+ * 投资实体类
  * @author YJJ
  * @Date: Created in 14:50 2019-11-04
  */
