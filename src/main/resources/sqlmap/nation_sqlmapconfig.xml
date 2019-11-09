@@ -22,5 +22,10 @@
         <mapper resource="cn/zjcj/intellectualplatform/dao/InvestmentMapper.xml"></mapper>
         <mapper resource="cn/zjcj/intellectualplatform/dao/RevenueMapper.xml"></mapper>
         <mapper resource="cn/zjcj/intellectualplatform/dao/TalentMapper.xml"></mapper>
+        <mapper resource="cn/zjcj/intellectualplatform/dao/EnergyMapper.xml"></mapper>
+        <mapper resource="cn/zjcj/intellectualplatform/dao/EnvironmentMapper.xml"></mapper>
+        <mapper resource="cn/zjcj/intellectualplatform/dao/LandMapper.xml"></mapper>
+        <mapper resource="cn/zjcj/intellectualplatform/dao/TrafficMapper.xml"></mapper>
+        <mapper resource="cn/zjcj/intellectualplatform/dao/WaterMapper.xml"></mapper>
     </mappers>
 </configuration>

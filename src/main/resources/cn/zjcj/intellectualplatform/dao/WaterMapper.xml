@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.zjcj.intellectualplatform.dao.WaterDao">
+    <select id="findByName" resultType="cn.zjcj.intellectualplatform.domain.WaterDomain">
+        select * from water where name = #{districtName,jdbcType=VARCHAR} ;
+    </select>
+
+    <select id="findByYear" resultType="cn.zjcj.intellectualplatform.domain.WaterDomain">
+        select * from water where year = #{year,jdbcType=INTEGER} ;
+    </select>
+</mapper>

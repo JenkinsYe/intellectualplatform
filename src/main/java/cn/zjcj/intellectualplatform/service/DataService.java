@@ -1,9 +1,6 @@
 package cn.zjcj.intellectualplatform.service;
 
-import cn.zjcj.intellectualplatform.domain.InvestmentDomain;
-import cn.zjcj.intellectualplatform.domain.RevenueDomain;
-import cn.zjcj.intellectualplatform.domain.SynthesisDomain;
-import cn.zjcj.intellectualplatform.domain.TalentDomain;
+import cn.zjcj.intellectualplatform.domain.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -79,4 +76,84 @@ public interface DataService {
      */
     List<TalentDomain> findTalentByYear(Integer year);
 
+
+    /**
+     * 能源保障查询
+     * 根据地区名查询
+     * @param name
+     * @return
+     */
+    List<EnergyDomain> findEnergyByName(String name);
+
+    /**
+     * 能源保障查询
+     * 根据年份查询
+     * @param year
+     * @return
+     */
+    List<EnergyDomain> findEnergyByYear(Integer year);
+
+    /**
+     * 环保保障查询
+     * 根据地区名查询
+     * @param name
+     * @return
+     */
+    List<EnvironmentDomain> findEnvironmentByName(String name);
+
+    /**
+     * 环保保障查询
+     * 根据年份查询
+     * @param year
+     * @return
+     */
+    List<EnvironmentDomain> findEnvironmentByYear(Integer year);
+
+    /**
+     * 土地保障查询
+     * 根据地区名查询
+     * @param name
+     * @return
+     */
+    List<LandDomain> findLandByName(String name);
+
+    /**
+     * 土地保障查询
+     * 根据年份查询
+     * @param year
+     * @return
+     */
+    List<LandDomain> findLandByYear(Integer year);
+
+    /**
+     * 交通物流保障
+     * 按照地区名查询
+     * @param name
+     * @return
+     */
+    List<TrafficDomain> findTrafficByName(String name);
+
+    /**
+     * 交通物流保障查询
+     * 按照年份查询
+     * @param year
+     * @return
+     */
+    List<TrafficDomain> findTrafficByYear(Integer year);
+
+    /**
+     * 水资源保障查询
+     * 按照地区名查询
+     * @param name
+     * @return
+     */
+    List<WaterDomain> findWaterByName(String name);
+
+    /**
+     * 水资源保障查询
+     * 根据年份查询
+     * @param year
+     * @return
+     */
+    List<WaterDomain> findWaterByYear(Integer year);
 }

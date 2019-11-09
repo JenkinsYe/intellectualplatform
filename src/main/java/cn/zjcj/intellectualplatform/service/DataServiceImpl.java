@@ -1,13 +1,7 @@
 package cn.zjcj.intellectualplatform.service;
 
-import cn.zjcj.intellectualplatform.dao.InvestmentDao;
-import cn.zjcj.intellectualplatform.dao.RevenueDao;
-import cn.zjcj.intellectualplatform.dao.SynthesisDao;
-import cn.zjcj.intellectualplatform.dao.TalentDao;
-import cn.zjcj.intellectualplatform.domain.InvestmentDomain;
-import cn.zjcj.intellectualplatform.domain.RevenueDomain;
-import cn.zjcj.intellectualplatform.domain.SynthesisDomain;
-import cn.zjcj.intellectualplatform.domain.TalentDomain;
+import cn.zjcj.intellectualplatform.dao.*;
+import cn.zjcj.intellectualplatform.domain.*;
 import cn.zjcj.intellectualplatform.util.ParamCheckUtils;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -33,6 +27,11 @@ public class DataServiceImpl implements DataService {
     private InvestmentDao investmentDao;
     private RevenueDao revenueDao;
     private TalentDao talentDao;
+    private EnergyDao energyDao;
+    private EnvironmentDao environmentDao;
+    private LandDao landDao;
+    private TrafficDao trafficDao;
+    private WaterDao waterDao;
 
     @PostConstruct
     public void init() {
@@ -47,6 +46,11 @@ public class DataServiceImpl implements DataService {
         investmentDao = sqlSession.getMapper(InvestmentDao.class);
         revenueDao = sqlSession.getMapper(RevenueDao.class);
         talentDao = sqlSession.getMapper(TalentDao.class);
+        energyDao = sqlSession.getMapper(EnergyDao.class);
+        environmentDao = sqlSession.getMapper(EnvironmentDao.class);
+        landDao = sqlSession.getMapper(LandDao.class);
+        trafficDao = sqlSession.getMapper(TrafficDao.class);
+        waterDao = sqlSession.getMapper(WaterDao.class);
     }
 
     @Override
@@ -94,6 +98,66 @@ public class DataServiceImpl implements DataService {
     public List<TalentDomain> findTalentByYear(Integer year) {
         if (ParamCheckUtils.isValidYear(year))
             return talentDao.findByYear(year);
+        return null;
+    }
+
+    @Override
+    public List<EnergyDomain> findEnergyByName(String name) {
+        return energyDao.findByName(name);
+    }
+
+    @Override
+    public List<EnergyDomain> findEnergyByYear(Integer year) {
+        if (ParamCheckUtils.isValidYear(year))
+            return energyDao.findByYear(year);
+        return null;
+    }
+
+    @Override
+    public List<EnvironmentDomain> findEnvironmentByName(String name) {
+        return environmentDao.findByName(name);
+    }
+
+    @Override
+    public List<EnvironmentDomain> findEnvironmentByYear(Integer year) {
+        if (ParamCheckUtils.isValidYear(year))
+            return environmentDao.findByYear(year);
+        return null;
+    }
+
+    @Override
+    public List<LandDomain> findLandByName(String name) {
+        return landDao.findByName(name);
+    }
+
+    @Override
+    public List<LandDomain> findLandByYear(Integer year) {
+        if (ParamCheckUtils.isValidYear(year))
+            return landDao.findByYear(year);
+        return null;
+    }
+
+    @Override
+    public List<TrafficDomain> findTrafficByName(String name) {
+        return trafficDao.findByName(name);
+    }
+
+    @Override
+    public List<TrafficDomain> findTrafficByYear(Integer year) {
+        if (ParamCheckUtils.isValidYear(year))
+            return trafficDao.findByYear(year);
+        return null;
+    }
+
+    @Override
+    public List<WaterDomain> findWaterByName(String name) {
+        return waterDao.findByName(name);
+    }
+
+    @Override
+    public List<WaterDomain> findWaterByYear(Integer year) {
+        if (ParamCheckUtils.isValidYear(year))
+            return waterDao.findByYear(year);
         return null;
     }
 }
