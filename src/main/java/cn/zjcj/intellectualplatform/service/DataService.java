@@ -78,4 +78,5 @@ public interface DataService {
      * @return
      */
     List<TalentDomain> findTalentByYear(Integer year);
+
 }

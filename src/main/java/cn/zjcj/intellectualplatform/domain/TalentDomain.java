@@ -18,9 +18,9 @@ public class TalentDomain implements Serializable {
     private Integer id;
     private String name;
     private Integer year;
-    private Double yearEndResidentPopulation;
-    private Double urbanPopulation;
-    private Double ruralPopulation;
+    private Integer yearEndResidentPopulation;
+    private Integer urbanPopulation;
+    private Integer ruralPopulation;
     private Double urbanOrganizationEmployer;
     private Double miningUrbanOrganizationEmployer;
     private Double manufactureUrbanOrganizationEmployer;
@@ -31,13 +31,13 @@ public class TalentDomain implements Serializable {
     private Double manufactureUrbanOrganizationEmployerSalaryAmount;
     private Double electricFuelWaterSupplyOrganizationEmployerSalaryAmount;
     private Double industryUrbanOrganizationEmployerSalaryAmount;
-    private Double urbanOrganizationEmployerSalaryAverage;
-    private Double miningUrbanOrganizationEmployerSalaryAverage;
-    private Double manufactureUrbanOrganizationEmployerSalaryAverage;
-    private Double electricFuelWaterSupplyOrganizationEmployerSalaryAverage;
+    private Integer urbanOrganizationEmployerSalaryAverage;
+    private Integer miningUrbanOrganizationEmployerSalaryAverage;
+    private Integer manufactureUrbanOrganizationEmployerSalaryAverage;
+    private Integer electricFuelWaterSupplyOrganizationEmployerSalaryAverage;
     private Double urbanRegistrationUnemployedPerson;
     private Double urbanRegistrationUnemployedRate;
-    private Double urbanPopulationDensity;
+    private Integer urbanPopulationDensity;
     private Double secondaryVocationalSchoolEnrollment;
     private Double secondaryVocationalSchoolStudent;
     private Double secondaryVocationalSchoolGraduate;
@@ -47,9 +47,9 @@ public class TalentDomain implements Serializable {
     private Double secondaryVocationalSchoolTeacher;
     private Double injuryInsuranceYearEndPopulation;
     private Double injuryInsurancePopulation;
-    private Double injuryInsuranceFundIncome;
-    private Double injuryInsuranceFundExpense;
-    private Double injuryInsuranceBalance;
+    private Integer injuryInsuranceFundIncome;
+    private Integer injuryInsuranceFundExpense;
+    private Integer injuryInsuranceBalance;
 
     @Override
     public String toString() {
